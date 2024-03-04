@@ -19,11 +19,11 @@ class _UserWidgetState extends State<UserWidget> {
       child: Scaffold(
         body: SafeArea(
           child: Container(
-            padding: EdgeInsets.all(10.0),
+            padding: const EdgeInsets.all(10.0),
             child: Column(
               children: [
                 MaterialButton(
-                    child: Text("Show Name"),
+                    child: const Text("Show Name"),
                     onPressed: () {
                       setState(() {
                         _count = 1;
@@ -41,11 +41,11 @@ class _UserWidgetState extends State<UserWidget> {
   Widget createWidget(int count, String fullName) {
     if (count == 1) {
       return Padding(
-        padding: EdgeInsets.all(30.0),
+        padding: const EdgeInsets.all(30.0),
         child: Column(
           children: [
             Container(
-                padding: EdgeInsets.only(bottom: 30.0),
+                padding: const EdgeInsets.only(bottom: 30.0),
                 child: Text(fullName)
             )
           ],

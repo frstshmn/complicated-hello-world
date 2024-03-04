@@ -1,12 +1,12 @@
 import 'package:complicated_hello_world/core/Storage/JSON.dart';
 
 abstract class Model {
-  late String tableName;
+  late String _tableName;
   late Map columns;
 
   Model() {
     JSON json = JSON();
-    columns = json.getData()['users'][0];
+    columns = json.getData()[table][0];
   }
 
   void set(String key, Object value) {
@@ -18,7 +18,11 @@ abstract class Model {
   }
 
   void set table(String name) {
-    tableName = name;
+    _tableName = name;
+  }
+
+  String get table {
+    return _tableName;
   }
 
 }

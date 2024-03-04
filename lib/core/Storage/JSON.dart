@@ -9,9 +9,6 @@ class JSON extends RetrieveMethod implements DataAccess{
   JSON() {}
 
   Future<void> getJson(string) async {
-    // String data = await rootBundle.loadString(string);
-    // result = json.decode(data);
-
     String data = '{"users": [{"id": "1","first_name": "Volodymyr","last_name": "Korenha"}]}';
     result = json.decode(data);
   }
