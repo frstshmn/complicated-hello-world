@@ -8,8 +8,8 @@ class UserController extends Controller {
   StatefulWidget init() {
     User dao = User();
 
-    String fullName = "${dao.getFirstName()} ${dao.getLastName()}";
+    fullName(String firstName, String lastName) => "$firstName $lastName";
 
-    return UserWidget(fullName: fullName);
+    return UserWidget(fullName: fullName(dao.getFirstName(), dao.getLastName()));
   }
 }

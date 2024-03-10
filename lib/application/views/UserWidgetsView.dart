@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class UserWidget extends StatefulWidget {
   final String fullName;
 
-  UserWidget({super.key, required this.fullName});
+  UserWidget({super.key, required this.fullName}) : assert(fullName.isNotEmpty);
 
   @override
   _UserWidgetState createState() => _UserWidgetState();
